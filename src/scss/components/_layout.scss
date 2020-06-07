@@ -1,0 +1,92 @@
+/**
+ * Layout
+ */
+
+.page-grid {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr minmax(auto, 1000px) 1fr;
+    position: relative;
+
+    .content {
+        grid-column-start: 2;
+        padding: 1em;
+    }
+}
+
+//================
+// Grid system
+// ===============
+
+// These functions are so that min and max work as per: https://github.com/sass/sass/issues/2378#issuecomment-433868712
+@function max($numbers...) {
+    @return m#{a}x(#{$numbers});
+}
+
+@function min($numbers...) {
+    @return m#{i}n(#{$numbers});
+}
+
+.grid {
+    display: grid;
+    grid-gap: 2rem;
+}
+
+.small-col {
+    grid-template-columns: repeat(auto-fit, minmax(min(15rem, 100%), 1fr));
+}
+
+.small-col-auto-fill {
+    grid-template-columns: repeat(auto-fill, minmax(min(15rem, 100%), 1fr));
+}
+
+.medium-col {
+    grid-template-columns: repeat(auto-fit, minmax(min(20rem, 100%), 1fr));
+}
+
+.medium-col-auto-fill {
+    grid-template-columns: repeat(auto-fill, minmax(min(20rem, 100%), 1fr));
+}
+
+.large-col {
+    grid-template-columns: repeat(auto-fit, minmax(min(25rem, 100%), 1fr));
+}
+
+.large-col-auto-fill {
+    grid-template-columns: repeat(auto-fill, minmax(min(25rem, 100%), 1fr));
+}
+
+.image-container {
+    width: 100%;
+}
+
+.object-fit-cover {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+// Flex grid 
+
+.flex-grid {
+    display: flex;
+    flex-wrap: wrap;
+
+    div {
+        height: 25rem;
+        width: 15rem;
+        margin: .5em;
+    }
+
+    .small {
+        flex-grow: 1;
+    }
+
+    .medium {
+        flex-grow: 3;
+    }
+
+    .large {
+        flex-grow: 5;
+    }
+}

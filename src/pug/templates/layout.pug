@@ -2,15 +2,33 @@ doctype
 html(lang='en')
     head
         meta(charset='utf-8')
-        title My site
+        //- TODO remove noindex
+        meta(name='robots' content='noindex')
+        title Arramu
         block styles
             link(rel="stylesheet", href="styles/main.css", attr)
             
     body
         header 
-            h1 This is the header 
+            .medium-container.header-container
+                img.header-logo(src="images/arramu-logo-simple.png", alt="arramu-logo")
+                nav
+                    ul
+                        li
+                            a(href="#") About
+                        li
+                            a(href="#") Gallery
+                        li
+                            a(href="#") Video
+                        li
+                            a(href="#") Contact
+                        li
+                            a(href="#") Shop
+
         block content
     footer
-        p This is the footer 
+        .medium-container.flex-space-between
+            p Copyright Arramu 2020
+            p Website by Tom
     block scripts
-        script(src="scripts.js")
+        script(src="scritps/scripts.js")

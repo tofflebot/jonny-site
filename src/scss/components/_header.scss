@@ -1,0 +1,33 @@
+header {
+    padding: 1em;
+}
+
+.header-logo {
+    width: 5rem;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav {
+
+    font-family: $heading-font-family;
+    font-size: 1.3rem;
+
+    a {
+        color: #707070;
+    }
+
+    ul {
+        margin-bottom: 0;
+    }
+
+    li {
+        display: inline-block;
+        margin-left: 1em;
+    }
+
+}

@@ -1,2 +1,95 @@
+/*! 
+ * Primitive UI | MIT License
+ *
+ * A minimalist front-end design toolkit built with Sass for developing 
+ * responsive, browser-consistent web apps.
+ *
+ * Author: Tania Rascia <hello@taniarascia.com>
+ * Source: https://github.com/taniarascia/primitive
+ * Documentation: https://taniarascia.github.io/primitive
+ */
+
+//==============================================================================
+// Configuration
+//==============================================================================
+
+@import 'base/variables';
+@import 'base/mixins';
+
+//==============================================================================
+// Reset
+//==============================================================================
+
 @import 'base/normalize';
 @import 'base/reset';
+
+//==============================================================================
+// Components
+//==============================================================================
+
+@import 'components/scaffolding';
+@import 'components/grid';
+@import 'components/helpers';
+@import 'components/buttons';
+@import 'components/forms';
+@import 'components/tables';
+@import 'components/navigation';
+@import 'components/layout';
+@import 'components/header';
+@import 'components/footer';
+
+
+
+//==============================================================================
+// Typograhpy
+//==============================================================================
+
+@import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
+
+//==============================================================================
+// Homepage
+//==============================================================================
+
+
+
+.large-logo {
+    width: 100%;
+    max-width: 25rem;
+}
+
+.site-description {
+    width: 100%;
+    max-width: 30rem;
+    margin: 0 auto;
+    font-family: $heading-font-family;
+    font-size: clamp(1.5rem, 2.5vw, 2.3rem);
+}
+
+.about-text {
+    grid-column-end: -1;
+}
+
+.contact {
+
+    margin-bottom: 10rem;
+
+    h3 {
+        margin-bottom: .1em;
+    }
+}
+
+.about-shards,
+.contact-shards {
+    position: absolute;
+    top: -18rem;
+    z-index: -100;
+    height: 50rem;
+}
+
+.about-shards {
+    left: 0;
+}
+
+.contact-shards {
+    right: 0;
+}

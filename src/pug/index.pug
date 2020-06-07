@@ -1,4 +1,66 @@
 extends templates/layout.pug 
 
 block content
-    p Hey this is the content
+    .page-grid
+        .content.text-center
+            img.large-logo.margin-bottom.margin-top(src="images/arramu-logo.png", alt="Arramu logo")
+            .site-description
+                p Hand crafted slate art, made with love in wales
+        
+        .content.margin-bottom
+            .grid.small-col
+                .image-container
+                    img.object-fit-cover(src="images/jonny-working.png", alt="alt")
+                .image-container
+                    img.object-fit-cover(src="images/product-image-9.png", alt="alt")
+        
+        .content.margin-bottom.text-center
+            a.button(href="") Shop now
+
+    .page-grid    
+        img.about-shards(src="images/shards-from-left.png", alt="shards")
+        .content.margin-bottom
+            .grid.large-col-auto-fill
+                .about-text
+                    h2 About
+                    p.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum inventore, id delectus laboriosam nulla repellat officiis aliquid culpa deserunt ratione quisquam ab nostrum neque? Ab sapiente et beatae laboriosam perspiciatis.
+        
+        .content.margin-bottom.text-center
+            h2 Gallery
+            .grid.small-col.margin-bottom
+                .image-container.small
+                    img.object-fit-cover(src="images/product-image-1.jpg", alt="alt")
+                .image-container.medium
+                    img.object-fit-cover(src="images/product-image-2.jpeg", alt="alt")
+                .image-container.large
+                    img.object-fit-cover(src="images/product-image-3.jpeg", alt="alt")
+                .image-container.small
+                    img.object-fit-cover(src="images/product-image-11.png", alt="alt")
+                .image-container.small
+                    img.object-fit-cover(src="images/product-image-7.png", alt="alt")
+                .image-container.medium
+                    img.object-fit-cover(src="images/product-image-8.png", alt="alt")
+            .grid.medium-col.margin-bottom
+                .image-container.large
+                    img.object-fit-cover(src="images/product-image-9.png", alt="alt")
+                .image-container.small
+                    img.object-fit-cover(src="images/product-image-10.png", alt="alt")
+            a.button(href="") Shop now
+        
+        .content.margin-bottom.text-center
+            h2 Video
+            .small-container
+                .video-container
+                    iframe(src="https://www.youtube.com/embed/fiH9edd25Bc" frameborder="0" allowfullscreen="")
+    .page-grid
+        img.contact-shards(src="images/shards-from-right.png", alt="shards")
+        .content.margin-bottom.contact
+            .grid.large-col-auto-fill
+                div
+                    h2 Get in touch
+                    p We'd love to talk hear from you
+                    h3 Email
+                    a(href="#") hello@arramu.com
+                    h3 Phone
+                    a(href="") +44 (0) 7880 077 600

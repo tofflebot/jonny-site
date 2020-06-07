@@ -1,7 +1,6 @@
 {
-  "name": "workspace",
+  "name": "arramu",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "watch-pug": "pug -w ./src/pug/*.pug -o ./dist -P",
@@ -20,5 +19,14 @@
     "postcss-cli": "^7.1.1",
     "pug-cli": "^1.0.0-alpha6",
     "sass": "^1.26.8"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tofflebot/jonny-site.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tofflebot/jonny-site/issues"
+  },
+  "homepage": "https://github.com/tofflebot/jonny-site#readme",
+  "description": ""
 }
