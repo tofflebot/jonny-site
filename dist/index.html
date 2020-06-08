@@ -3,13 +3,18 @@
   <head>
     <meta charset="utf-8">
     <meta name="robots" content="noindex">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Arramu</title>
     <link rel="stylesheet" href="styles/main.css" attr>
+    <script src="https://kit.fontawesome.com/48a780d8d5.js" crossorigin="anonymous"></script>
   </head>
   <body>
     <header> 
       <div class="medium-container header-container"><img class="header-logo" src="images/arramu-logo-simple.png" alt="arramu-logo">
+        <div class="nav-background"></div>
+        <button class="mobile-nav-open-button"><i class="fas fa-bars">   </i></button>
         <nav>
+          <button class="mobile-nav-close-button"><i class="fas fa-times"></i></button>
           <ul>
             <li><a href="#">About</a></li>
             <li><a href="#">Gallery</a></li>
@@ -20,10 +25,11 @@
         </nav>
       </div>
     </header>
+    <div class="header-buffer"></div>
     <div class="page-grid">
       <div class="content text-center"><img class="large-logo margin-bottom margin-top" src="images/arramu-logo.png" alt="Arramu logo">
         <div class="site-description">
-          <p>Hand crafted slate art, made with love in wales</p>
+          <p>Hand crafted slate art,<br>made with love in wales</p>
         </div>
       </div>
       <div class="content margin-bottom">
@@ -38,7 +44,7 @@
       <div class="content margin-bottom">
         <div class="grid large-col-auto-fill">
           <div class="about-text">
-            <h2>About</h2>
+            <h2 class="text-center">About</h2>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum inventore, id delectus laboriosam nulla repellat officiis aliquid culpa deserunt ratione quisquam ab nostrum neque? Ab sapiente et beatae laboriosam perspiciatis.
               
@@ -47,7 +53,6 @@
         </div>
       </div>
       <div class="content margin-bottom text-center">
-        <h2>Gallery</h2>
         <div class="grid small-col margin-bottom">
           <div class="image-container small"><img class="object-fit-cover" src="images/product-image-1.jpg" alt="alt"></div>
           <div class="image-container medium"><img class="object-fit-cover" src="images/product-image-2.jpeg" alt="alt"></div>
@@ -56,18 +61,15 @@
           <div class="image-container small"><img class="object-fit-cover" src="images/product-image-7.png" alt="alt"></div>
           <div class="image-container medium"><img class="object-fit-cover" src="images/product-image-8.png" alt="alt"></div>
         </div>
-        <div class="grid medium-col margin-bottom">
+        <div class="grid medium-col large-margin-bottom">
           <div class="image-container large"><img class="object-fit-cover" src="images/product-image-9.png" alt="alt"></div>
           <div class="image-container small"><img class="object-fit-cover" src="images/product-image-10.png" alt="alt"></div>
         </div><a class="button" href="">Shop now</a>
-      </div>
-      <div class="content margin-bottom text-center">
-        <h2>Video</h2>
-        <div class="small-container">
-          <div class="video-container">
-            <iframe src="https://www.youtube.com/embed/fiH9edd25Bc" frameborder="0" allowfullscreen=""></iframe>
+        <figure class="rounded-corners homepage-video">
+          <div class="plyr__video-embed" id="player">
+            <iframe src="https://www.youtube.com/embed/pnRNdbqXu1I&amp;t?origin=https://plyr.io&amp;iv_load_policy=3&amp;modestbranding=1&amp;playsinline=1&amp;showinfo=0&amp;rel=0&amp;enablejsapi=1" allowfullscreen="" allowtransparency="" allow="autoplay"></iframe>
           </div>
-        </div>
+        </figure>
       </div>
     </div>
     <div class="page-grid"><img class="contact-shards" src="images/shards-from-right.png" alt="shards">
@@ -82,12 +84,23 @@
         </div>
       </div>
     </div>
+    <footer>
+      <div class="medium-container">
+        <div class="footer-grid">
+          <div class="footer-left">
+            <p> 	&copy; Arramu 2020</p>
+          </div>
+          <div class="footer-right social-icons"><a href="#" target="_blank"><i class="fa fa-facebook"></i></a><a href="#" target="_blank"><i class="fa fa-instagram"></i></a></div>
+          <div class="footer-left">
+            <p><a href="#">About this site</a></p>
+          </div>
+          <div class="footer-right">
+            <p>Website by <a href="#">Tom</a></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="https://cdn.plyr.io/3.6.2/plyr.polyfilled.js"></script>
+    <script src="scripts/scripts.js"></script>
   </body>
-  <footer>
-    <div class="medium-container flex-space-between">
-      <p>Copyright Arramu 2020</p>
-      <p>Website by Tom</p>
-    </div>
-  </footer>
-  <script src="scritps/scripts.js"></script>
 </html>

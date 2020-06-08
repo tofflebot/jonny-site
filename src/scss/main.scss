@@ -37,6 +37,7 @@
 @import 'components/layout';
 @import 'components/header';
 @import 'components/footer';
+@import 'components/plyr';
 
 
 
@@ -50,7 +51,10 @@
 // Homepage
 //==============================================================================
 
+body {
+    position: relative;
 
+}
 
 .large-logo {
     width: 100%;
@@ -62,7 +66,20 @@
     max-width: 30rem;
     margin: 0 auto;
     font-family: $heading-font-family;
-    font-size: clamp(1.5rem, 2.5vw, 2.3rem);
+
+    @supports(fontsize: clamp()) {
+        font-size: clamp(1.3rem, 4vw, 2.3rem);
+    }
+
+    font-size: 1.3rem;
+
+    @include medium-breakpoint {
+        font-size: 1.8rem;
+    }
+
+    @include large-breakpoint {
+        font-size: 2.2rem;
+    }
 }
 
 .about-text {
@@ -81,9 +98,19 @@
 .about-shards,
 .contact-shards {
     position: absolute;
-    top: -18rem;
-    z-index: -100;
-    height: 50rem;
+    top: -30rem;
+    max-width: 100%;
+    z-index: -10;
+    width: 20rem;
+
+    @media screen and (min-width: 700px) {
+        width: 22rem;
+    }
+
+    @media screen and (min-width: 870px) {
+        width: 29rem;
+        top: -18rem;
+    }
 }
 
 .about-shards {
@@ -92,4 +119,10 @@
 
 .contact-shards {
     right: 0;
+}
+
+.homepage-video {
+    width: 100%;
+    max-width: 45rem;
+    margin: 4rem auto;
 }

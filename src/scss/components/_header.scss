@@ -1,9 +1,21 @@
 header {
-    padding: 1em;
+    padding: .5em;
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    background: white;
 }
 
 .header-logo {
-    width: 5rem;
+    width: 3rem;
+
+    @include medium-breakpoint {
+        width: 4rem;
+    }
+
+    @include large-breakpoint {
+        width: 5rem;
+    }
 }
 
 .header-container {
@@ -13,21 +25,95 @@ header {
 }
 
 nav {
-
     font-family: $heading-font-family;
     font-size: 1.3rem;
+    position: fixed;
+    right: -15rem;
+    top: 0;
+    height: 100%;
+    background: #fff;
+    z-index: 20;
+    transition: all .4s ease-in-out;
+    width: 15rem;
 
     a {
         color: #707070;
     }
 
     ul {
+        margin-top: 5rem;
         margin-bottom: 0;
     }
 
     li {
-        display: inline-block;
-        margin-left: 1em;
+        list-style: none;
+        margin-bottom: 1.5rem;
     }
 
+
+    &.nav-open {
+        right: 0;
+    }
+
+    @include medium-breakpoint {
+        position: static;
+        width: auto;
+        background: transparent;
+        height: auto;
+
+        ul {
+            margin-top: 0;
+        }
+
+        li {
+            display: inline-block;
+            margin-left: 1em;
+            margin-bottom: 0;
+        }
+    }
+
+}
+
+.nav-background {
+    transition: .4s ease;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(68, 68, 68, 0.507);
+    z-index: 10;
+    opacity: 0;
+    pointer-events: none;
+
+    &.nav-open {
+        opacity: 1;
+        pointer-events: all;
+    }
+}
+
+.mobile-nav-open-button,
+.mobile-nav-close-button {
+    background: none;
+    border: none;
+    color: $font-color;
+    font-size: 1.5rem;
+    margin-bottom: 0;
+
+    @include medium-breakpoint {
+        display: none;
+    }
+
+    &:hover {
+        background: none;
+        color: $font-color;
+        border: none;
+    }
+
+}
+
+.mobile-nav-close-button {
+    position: absolute;
+    top: 1.2rem;
+    right: 1.7rem;
 }

@@ -1,3 +1,44 @@
 footer {
     background: #fff;
+    color: $font-color;
+    padding: 2rem;
+}
+
+.footer-grid {
+    display: grid;
+    grid-gap: 1em;
+    grid-template-columns: 1fr;
+
+    @media screen and (min-width: $tablet) {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    div {
+        align-self: center;
+    }
+}
+
+.footer-left,
+.footer-right {
+    text-align: center;
+}
+
+
+.footer-left {
+    @media screen and (min-width: $tablet) {
+        text-align: left;
+    }
+}
+
+.footer-right {
+    @media screen and (min-width: $tablet) {
+        text-align: right;
+    }
+}
+
+.social-icons {
+    a {
+        font-size: 2.5rem;
+        margin: 0 1.5rem;
+    }
 }

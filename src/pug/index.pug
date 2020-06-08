@@ -5,7 +5,9 @@ block content
         .content.text-center
             img.large-logo.margin-bottom.margin-top(src="images/arramu-logo.png", alt="Arramu logo")
             .site-description
-                p Hand crafted slate art, made with love in wales
+                p Hand crafted slate art,
+                    br 
+                    | made with love in wales
         
         .content.margin-bottom
             .grid.small-col
@@ -22,12 +24,12 @@ block content
         .content.margin-bottom
             .grid.large-col-auto-fill
                 .about-text
-                    h2 About
+                    h2.text-center About
                     p.
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum inventore, id delectus laboriosam nulla repellat officiis aliquid culpa deserunt ratione quisquam ab nostrum neque? Ab sapiente et beatae laboriosam perspiciatis.
         
         .content.margin-bottom.text-center
-            h2 Gallery
+            
             .grid.small-col.margin-bottom
                 .image-container.small
                     img.object-fit-cover(src="images/product-image-1.jpg", alt="alt")
@@ -41,18 +43,17 @@ block content
                     img.object-fit-cover(src="images/product-image-7.png", alt="alt")
                 .image-container.medium
                     img.object-fit-cover(src="images/product-image-8.png", alt="alt")
-            .grid.medium-col.margin-bottom
+            .grid.medium-col.large-margin-bottom
                 .image-container.large
                     img.object-fit-cover(src="images/product-image-9.png", alt="alt")
                 .image-container.small
                     img.object-fit-cover(src="images/product-image-10.png", alt="alt")
             a.button(href="") Shop now
         
-        .content.margin-bottom.text-center
-            h2 Video
-            .small-container
-                .video-container
-                    iframe(src="https://www.youtube.com/embed/fiH9edd25Bc" frameborder="0" allowfullscreen="")
+            figure.rounded-corners.homepage-video
+                #player.plyr__video-embed
+                    iframe(src="https://www.youtube.com/embed/pnRNdbqXu1I&t?origin=https://plyr.io&iv_load_policy=3&modestbranding=1&playsinline=1&showinfo=0&rel=0&enablejsapi=1" allowfullscreen="" allowtransparency="" allow="autoplay")
+
     .page-grid
         img.contact-shards(src="images/shards-from-right.png", alt="shards")
         .content.margin-bottom.contact
