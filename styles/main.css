@@ -1110,7 +1110,17 @@ header {
 }
 
 .header-logo {
-  width: clamp(3rem, 10vw, 5rem);
+  width: 3rem;
+}
+@media (min-width: 768px) {
+  .header-logo {
+    width: 4rem;
+  }
+}
+@media (min-width: 1000px) {
+  .header-logo {
+    width: 5rem;
+  }
 }
 
 .header-container {
@@ -2874,7 +2884,22 @@ body {
   max-width: 30rem;
   margin: 0 auto;
   font-family: "Julius Sans One", -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-size: clamp(1.3rem, 4vw, 2.3rem);
+  font-size: 1.3rem;
+}
+@supports (fontsize: clamp()) {
+  .site-description {
+    font-size: clamp(1.3rem, 4vw, 2.3rem);
+  }
+}
+@media (min-width: 768px) {
+  .site-description {
+    font-size: 1.8rem;
+  }
+}
+@media (min-width: 1000px) {
+  .site-description {
+    font-size: 2.2rem;
+  }
 }
 
 .about-text {
