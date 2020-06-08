@@ -17,3 +17,21 @@ function closeMobileNav() {
 
 navOpenButton.addEventListener('click', openMobileNav);
 navCloseButton.addEventListener('click', closeMobileNav);
+navBackground.addEventListener('click', function(e) {
+    if (e.target === e.currentTarget) {
+        closeMobileNav();
+    }
+});
+
+function headerBuffer() {
+    const headerBuffer = document.querySelector('.header-buffer');
+    const header = document.querySelector('header');
+    
+    headerBuffer.style.height = `${header.clientHeight}px`;
+};
+
+headerBuffer();
+
+const player = new Plyr('#player', {});
+// Expose player so it can be used from the console
+window.player = player;
