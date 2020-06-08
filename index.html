@@ -5,11 +5,14 @@
     <meta name="robots" content="noindex">
     <title>Arramu</title>
     <link rel="stylesheet" href="styles/main.css" attr>
+    <script src="https://kit.fontawesome.com/48a780d8d5.js" crossorigin="anonymous"></script>
   </head>
   <body>
     <header> 
       <div class="medium-container header-container"><img class="header-logo" src="images/arramu-logo-simple.png" alt="arramu-logo">
+        <div class="nav-background"></div>
         <nav>
+          <button class="mobile-nav-close-button"><i class="fas fa-times"></i></button>
           <ul>
             <li><a href="#">About</a></li>
             <li><a href="#">Gallery</a></li>
@@ -18,12 +21,13 @@
             <li><a href="#">Shop</a></li>
           </ul>
         </nav>
+        <button class="mobile-nav-open-button"><i class="fas fa-bars">   </i></button>
       </div>
     </header>
     <div class="page-grid">
       <div class="content text-center"><img class="large-logo margin-bottom margin-top" src="images/arramu-logo.png" alt="Arramu logo">
         <div class="site-description">
-          <p>Hand crafted slate art, made with love in wales</p>
+          <p>Hand crafted slate art,<br>made with love in wales</p>
         </div>
       </div>
       <div class="content margin-bottom">
@@ -38,7 +42,7 @@
       <div class="content margin-bottom">
         <div class="grid large-col-auto-fill">
           <div class="about-text">
-            <h2>About</h2>
+            <h2 class="text-center">About</h2>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum inventore, id delectus laboriosam nulla repellat officiis aliquid culpa deserunt ratione quisquam ab nostrum neque? Ab sapiente et beatae laboriosam perspiciatis.
               
@@ -84,10 +88,22 @@
     </div>
   </body>
   <footer>
-    <div class="medium-container flex-space-between">
-      <p>Copyright Arramu 2020</p>
-      <p>Website by Tom</p>
+    <div class="medium-container">
+      <div class="footer-grid">
+        <div class="footer-left">
+          <p>Copyright Arramu 2020</p>
+        </div>
+        <div class="footer-right">
+          <p>Website by Tom</p>
+        </div>
+        <div class="footer-left">
+          <p>hello</p>
+        </div>
+        <div class="footer-right">
+          <p>hey there</p>
+        </div>
+      </div>
     </div>
   </footer>
-  <script src="scritps/scripts.js"></script>
+  <script src="scripts/scripts.js"></script>
 </html>
