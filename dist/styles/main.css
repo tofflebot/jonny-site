@@ -2949,4 +2949,15 @@ body {
   margin: 4rem auto;
 }
 
+.columns {
+  columns: 3 20rem;
+  column-gap: 1rem;
+}
+.columns div {
+  margin-bottom: 0.75rem;
+}
+.columns .large {
+  column-span: all;
+}
+
 /*# sourceMappingURL=main.css.map */
